@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+<!--    Documentación del esquema-->
+    <xs:annotation>
+        <xs:documentation xml:lang ="es-es">
+            <modulo>Lenguajes de marcas y sistemas de gestión de información.</modulo>
+            <fecha_creación> 22/02/2022</fecha_creación>
+            <autor> Francisco Miguel Colls Gutiérrez</autor>
+        </xs:documentation>
+    </xs:annotation>
+    
+<!-- Tipos de datos indicados   -->
+    <xs:simpleType name="tipoID">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="eq3900080 [0-9][0-9][0-9]"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tipoEquipo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CPU_Torre"/>
+            <xs:enumeration value="Impresora"/>
+            <xs:enumeration value="Monitor"/>
+            <xs:enumeration value="Portatil"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tipoDia">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="31"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tipoMes">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="12"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tipoYear">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1996"/>
+            <xs:maxInclusive value="2100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+<!--    XML Schema-->
+    <xs:element name="inventario">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="equipo" minOccurs="1" maxOccurs="unbounded"> 
+				<!--Corregido minOccurs="0" Al menos tiene que haber un equipo en el inventario.-->
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="tipo" type="tipoEquipo" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="numserie" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="fechaadquisicion" minOccurs="1" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="dia" type="tipoDia" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="mes" type="tipoMes" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="year" type="tipoYear" minOccurs="1" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="ubicacion" minOccurs="1" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="departamento" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="aula" type="xs:string" minOccurs="1" maxOccurs="1"/>                                      
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="caracteristicas" minOccurs="1" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="fabricante" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="modelo" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="memoria" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="disco" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="discotipo" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                    <xs:element name="capacidad" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>   
+                                        </xs:element>
+                                        <xs:element name="procesador" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                        <xs:element name="tipoimpresion" type="xs:string" minOccurs="0" maxOccurs="1"/>                                    
+                                    </xs:sequence>
+                                </xs:complexType>    
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="idequip" type="tipoID" use="required"/> 
+						<!--Corregido id siempre required-->
+                    <!-- Antes del complextype agregamos el atributo del elemento-->
+                    </xs:complexType>
+                </xs:element>
+             </xs:sequence>    
+        </xs:complexType>              
+    </xs:element>
+    
+</xs:schema>

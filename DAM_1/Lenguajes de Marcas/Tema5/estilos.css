@@ -1,0 +1,52 @@
+body,
+html{
+    font-family: Verdana;
+    background:rgb(255, 129, 80);
+    text-align: center;
+}
+
+div{
+    /* Evita que se salga la tabla del div. overflow */
+    overflow: auto;
+    margin: 3%;
+    text-align: center;
+    background: white;
+    padding: 20px;
+}
+
+h1{
+    color: rgb(255, 129, 80);
+    text-align: left;
+}
+h2{
+    color: rgb(255, 129, 80);
+    text-align: center;
+}
+ul{
+    list-style-position: inside;
+}
+li{
+    text-align: left;
+}
+
+table{
+   
+    background-color: rgb(250, 225, 219);
+    border: 3px;
+    border-style: solid;
+    border-color: rgb(252, 153, 114);
+    margin: auto;
+    width:100%;
+    padding: 5px;
+}
+
+td{
+    border: 2px;
+    text-align: center;
+    border-style: solid;
+    border-color:rgb(255, 129, 80);
+    font-family: Verdana;
+    padding: 10px 30px 10px 30px;
+}
+
+

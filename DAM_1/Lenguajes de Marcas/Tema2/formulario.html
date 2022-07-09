@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/estilosForm.css" media="screen" />
+    <title>TAREA LMSGI02</title>
+</head>
+<body >
+    <form action="mailto:info@tarea2delmsgi.es" method="post">
+        <h1>Regístrate</h1>
+        <fieldset>
+            <legend>Rellena los siguientes datos</legend>
+            <b>Nombre:</b> <input name='nombre' type='text' required />
+            <b>Apellidos:</b> <input name='apellidos' type='text' required />
+            <br><br>
+            <b>Correo electrónico: </b><input name='email' type='email' required /> 
+                <fieldset>
+                    <legend>Tipo de habitación</legend>
+                    <input type="radio" name="habitacion" value="individual">
+                    <label for="individual">Individual</label>
+                    <input type="radio" name="habitacion" value="doble">
+                    <label for="doble">Doble</label>
+                    <input type="radio" name="habitacion" value="familiar">
+                    <label for="familiar">Familiar</label>
+                    <input type="radio" name="habitacion" value="suit">
+                    <label for="suit">Suit</label>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Servicos de hotel</legend>
+                    <input type="checkbox" name="parking" id="parking">
+                    <label for="parking">Parking</label>
+                    <input type="checkbox"  name="guarderia" id="guarderia">
+                    <label for="guarderia"> Guarderia</label>
+                    <input type="checkbox" name="Spa" id="spa">
+                    <label for="spa"> Spa</label>
+                    <input type="checkbox" name="Piscina" id="piscina">
+                    <label for="piscina">Piscina climatizada</label>
+                    <input type="checkbox" name="peluqeria" id="peluqueria">
+                    <label for="peluqueria"> Peluqeria</label>
+                </fieldset>
+                <br>
+                <label >Elige una actividad complementaria</label>
+                <select id="actividad" name="actividad">
+                  <option >Ninguna actividad</option>
+                  <option >Alquiler de bicicletas</option>
+                  <option >Rutas a caballo</option>
+                  <option >Escalada</option>
+                </select>
+                <br>
+                <br>
+                <textarea name="message" rows="5" cols="50" placeholder="Escribe cualquier información que creas de interés"></textarea >
+                <img  src="./img/2010-FC-CMYK.jpg" alt="isla">
+                <br>
+                <button type="submit" formenctype="text/plain">Enviar</button> 
+                <!-- Si queremos que en el correo los campos vayan uno en cada línea, -->
+                <button type="reset">Borrar Formulario</button>
+        </fieldset>
+        <h2><a href="./index.html">Volver a Inicio</a></h2>
+       </form>
+   
+</body>
+</html>

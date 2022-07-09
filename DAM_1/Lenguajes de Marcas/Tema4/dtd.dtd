@@ -1,0 +1,22 @@
+<!ELEMENT inventario (equipo+)>
+<!ELEMENT equipo (tipo, numserie, fechaadquisicion, ubicacion, caracteristicas)>
+<!ATTLIST equipo
+          idequip ID #REQUIRED>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT numserie (#PCDATA)>
+<!ELEMENT fechaadquisicion (dia, mes, year)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT ubicacion (departamento, aula)>
+<!ELEMENT departamento (#PCDATA)>
+<!ELEMENT aula (#PCDATA)>
+<!ELEMENT caracteristicas (fabricante,modelo,memoria?,disco?,procesador?,tipoimpresion?)>
+<!ELEMENT fabricante (#PCDATA)>
+<!ELEMENT modelo (#PCDATA)>
+<!ELEMENT memoria (#PCDATA)>
+<!ELEMENT disco (discotipo, capacidad)>
+<!ELEMENT discotipo (#PCDATA)>
+<!ELEMENT capacidad (#PCDATA)>
+<!ELEMENT procesador (#PCDATA)>
+<!ELEMENT tipoimpresion (#PCDATA)>

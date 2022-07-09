@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:  rgb(247, 173, 147);
+  }
+
+  /* Estilo del header */
+  header {
+    background-color: rgb(252, 248, 248);
+    padding: 30px;
+    font-size: 25px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: orangered;
+  }
+  #cabecera {
+    text-align: center;
+  }
+
+  section {
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  /* Estilo menú de navegación */
+  nav {
+    background: rgb(247, 173, 147);
+    width: 20%;
+    height: 900px;
+  }
+  
+  /* Estilo de la lista dentro del menú*/
+   nav ul {
+    padding: 100px;
+  }
+  nav li {
+    padding: 10px; 
+  } 
+  
+  /* Estilo del contenido */
+  article {
+    
+    background-color: #ffffff;
+    padding: 30px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: orangered;
+    border-top: none;
+    border-bottom: none;
+  }
+  
+  /* Estilo del  footer */
+  footer {
+    background-color: orangered;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Tipografía */
+  h1 {
+    color:rgb(255, 72, 0);
+    text-align: center;
+  }
+  h2 {
+    color:orange;
+    text-align: center;
+  }
+  p {
+      font-size: 16px;
+      text-align: justify;
+      padding: 20px;
+  }
+  #pfooter {
+    text-align: center;
+}
+
+  /* Estilos imagen */
+  img  {
+    width: 30%;
+    padding: 1%;
+  }
+  #img1 {
+    float:left;
+  }
+  #img2 {
+    float:right;
+  }
+  #img3 {
+    display:block;
+    margin:auto;
+    width: 70%;
+  }
+  #img4 {
+    float:right;
+    padding-top: 8%;
+    }
+  /* Estilos video */
+video {
+    display:block;
+    margin:auto;
+}
+

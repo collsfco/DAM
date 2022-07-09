@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE dam>
+
+<dam>
+	<modulo nombre="Lenguajes de Marcas y Sistemas de Gestiónde Información"
+			horas_semanales="4" caracter="obligatorio"
+			inicio="15/09/2010" fin="30/06/2011">
+			
+		<alumno>
+			<nombre>Ana</nombre>
+			<apellidos>Fernández Gutiérrez</apellidos>
+			<nif>16965696L</nif>
+			<teléfono>789654321</teléfono>
+			<email>ana.fdezgtrrez@hotmail.com</email>
+			<dirección calle="El Percebe" número="13" localidad="Santander" cp="39302"/> 
+			<evaluación faltas="" notas=""/>
+		</alumno>
+		
+		<alumno>
+			<nombre>Pepito</nombre>
+			<apellidos>Grillo</apellidos>
+			<nif>98765432H</nif>
+			<teléfono>656566555</teléfono>
+			<email>yhyh@yahoo.com</email>
+			<dirección avenida="El Pez" número="5" localidad="Suances" cp="39401"/> 
+			<evaluación faltas="0" notas="apto"/>
+		</alumno>
+	</modulo>
+</dam>

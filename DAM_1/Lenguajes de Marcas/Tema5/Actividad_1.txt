@@ -1,0 +1,64 @@
+a) Nombre de los grados con plan anterior al 2002.
+
+	//grado[plan<2002]/nombre/text()
+	--como nombre y plan estan al mismo nivel se pone la condicion de plan entre corchetes
+
+	Grado en Económicas
+	Ingeniería Industrial
+	Biología
+	Grado en Historia
+	Grado en Geología
+
+b) Nombre y plan de los grados de la Facultad de Ciencias.
+
+	//grado[centro='Facultad de Ciencias']/nombre | //grado[centro='Facultad de Ciencias']/plan
+
+	Ingeniería Informática
+	2003
+	Ingeniería Quimica
+	2003
+	Biología
+	2001
+	Grado en Geología
+	1990
+
+c) Créditos teóricos totales de las asignaturas cuya titulación es “c01”
+	
+	sum(//asignatura[@titulacion="c01"]/creditos_teoricos/node())
+
+	9.
+
+d) Asignaturas del Grado en Informática
+
+	//asignatura[@titulacion=//grado[nombre="Ingeniería Informática"]/@id_c]/nombre
+
+	<nombre>Ofimática</nombre>
+	<nombre>Ingeniería del Software</nombre>
+	<nombre>Bases de Datos</nombre>
+
+
+e) Nombre de los grados con alguna asignatura que no tiene prácticas.
+
+	//grado[@id_c=//asignatura/caracteristicas[practicas="No"]/../@titulacion]/nombre
+	
+	<nombre>Grado en Económicas</nombre>
+	<nombre>Ingeniería Industrial</nombre>
+	<nombre>Biología</nombre>
+
+
+
+f) Nombre del grado de la asignatura de Bases de Datos.
+
+	//grado[@id_c=//asignatura[nombre="Bases de Datos"]/@titulacion]/nombre
+
+	<nombre>Ingeniería Informática</nombre>
+
+
+g) Nombre de los centros que tienen asignaturas opcionales en el 2º trimestre y 
+cuyos créditos superen los 250.
+
+	//grado[@id_c=//asignatura[trimestre=2]/caracteristicas[tipo="Opcional"]/../@titulacion and creditos > 250]/centro 
+
+	<centro>Escuela de Ingeniería</centro>
+	<centro>Facultad de Humanidades</centro>
+	<centro>Facultad de Ciencias</centro>

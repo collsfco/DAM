@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+    <!-- Cabecera del RSS y enlace de ubicacion del archivo xml -->
+        <title>Noticias CES 2022</title>
+        <link>http://localhost/rss/rss.xml</link>
+        <description>RRS-Noticias. Francisco Colls</description>
+        <!-- Enlaces del RSS -->
+        <item>
+            <title>Blog IES A.G.L</title>
+            <link>https://agustoenelaugusto.com/</link>
+            <description>Blog del IES Augusto González de Linares</description>
+            <guid>https://agustoenelaugusto.com/</guid>
+        </item>
+        <item>
+            <title>Web IES A.G.L</title>
+            <link>http://www.iesaglinares.com/</link>
+            <description>Web del IES Augusto González de Linares</description>
+            <guid>http://www.iesaglinares.com/</guid>
+        </item>
+        <item>
+            <title>Web de Noticias de CES 2022</title>
+            <link>http://localhost/rss/actualidad/index.html</link>
+            <description>Noticias CES 2022</description>
+            <guid>http://localhost/rss/actualidad/index.html</guid>
+        </item>
+    </channel>
+</rss>
