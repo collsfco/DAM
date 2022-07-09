@@ -1,0 +1,22 @@
+/* 
+    Author     : FColls
+*/
+/*
+Estilo basado en los colores de la calculadora de Windows 10
+modo oscuro.
+*/
+
+ .button{
+    -fx-background-color:
+        #3C3C3C    
+}
+
+.button:hover{
+    -fx-background-color:
+        #717171
+ }
+ 
+ .button:pressed{
+    -fx-background-color:
+        #A6A3A3
+}

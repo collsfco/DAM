@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="PROG10_Tarea.jnlp">
+  <information>
+    <title>PROG10_Tarea</title>
+    <vendor>FColls</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="PROG10_Tarea.jar" size="5335" download="eager" />
+    <jar href="lib\javafx-swt.jar" size="37127" download="eager" />
+    <jar href="lib\javafx.base.jar" size="745885" download="eager" />
+    <jar href="lib\javafx.controls.jar" size="2544035" download="eager" />
+    <jar href="lib\javafx.fxml.jar" size="129495" download="eager" />
+    <jar href="lib\javafx.graphics.jar" size="4254795" download="eager" />
+    <jar href="lib\javafx.media.jar" size="276003" download="eager" />
+    <jar href="lib\javafx.swing.jar" size="88809" download="eager" />
+    <jar href="lib\javafx.web.jar" size="726942" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="controlador.Main"  name="PROG10_Tarea" />
+  <update check="always"/>
+</jnlp>
